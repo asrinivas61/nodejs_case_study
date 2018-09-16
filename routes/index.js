@@ -1,3 +1,3 @@
-var routes = require('./fileUploadRoute');
+var routes = require('./routes');
 
 module.exports = routes;
