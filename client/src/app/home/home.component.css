@@ -1,0 +1,23 @@
+/*.userListAlert {
+	height: 70px;
+}
+*/
+.list-container {
+	width: 75%;
+	margin: auto;
+	padding: 10px 45px;
+	box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.text-danger {
+	position: absolute;
+	top: 34px;
+}
+
+.col-md-offset-2 {
+	height: 50px;
+}
+
+mat-input-container {
+	width: 50%;
+}

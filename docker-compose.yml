@@ -1,0 +1,16 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: .
+    environment:
+      - MONGODB_URL=mongodb://mongodb
+      - APP=NODEJS_DEMONSTRATION
+      - NODE_ENV=production
+      - PORT=3001
+    ports:
+      - 3001:3001
+  mongodb:
+    image: mvertes/alpine-mongo
+    ports:
+      - 27017:27017

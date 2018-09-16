@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*@import "~material-design-icons/iconfont/material-icons.css";*/
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.container {
+	width: 100% !important;
+}
+
+.card {
+	display: inline-block;
+    position: relative;
+    width: 100%;
+    margin: 25px 0;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.14);
+    border-radius: 6px;
+    color: rgba(0,0,0,.87);
+    background: #fff;
+}
+
+.card .card-content {
+    padding: 15px 20px;
+    position: relative;
+}

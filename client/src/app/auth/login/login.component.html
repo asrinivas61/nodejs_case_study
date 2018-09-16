@@ -1,0 +1,22 @@
+<div class="login_bg">
+	<div class="title">Login Page</div>
+	<form class="form" #f="ngForm" novalidate (ngSubmit)="login()">
+		<div>
+			<input type="email" name="username" placeholder="username" [(ngModel)]="user.username" #username="ngModel" required>
+		</div>
+	  	<div [hidden]="username.valid || (username.pristine && !f.submitted)" class="text-danger">
+	      username shouldn't be empty
+	  	</div>
+	  	<div>
+	    	<input type="password" name="password" placeholder="password" [(ngModel)]="user.password" #password="ngModel" required>
+	  	</div>
+	  	<div [hidden]="password.valid || (password.pristine && !f.submitted)" class="text-danger">
+	      password shouldn't be empty
+	  	</div>
+	  	<div class="submit">
+		  	<button type="submit" value="login" [disabled]="!f.valid">Login</button>
+	  	</div>
+	</form>
+	<div class="hint">Hint: Enter username & password as <strong style="color: yellow">node</strong></div>
+	<!-- <div class="greeting">Hello {{user.username}}</div> -->
+</div>

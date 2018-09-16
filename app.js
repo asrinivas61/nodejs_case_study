@@ -4,8 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
-var fs = require('fs');
-var rfs = require('rotating-file-stream');
+var { logFormat, accessLogStream } = require('./logger');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -15,20 +14,6 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-
-var logDirectory = path.join(__dirname, 'log');
-var logFormat = process.env.production ?
-                ':remote-addr - :remote-user [:date[web]] ":method :url HTTP/:http-version" :status :res[content-length] ":referrer" ":user-agent"' :
-                'dev';
-
-// create a rotating write stream
-var accessLogStream = process.env.production ? rfs('access.log', {
-  interval: '1d', // rotate daily
-  path: logDirectory
-}) : process.stdout;
-
-// ensure log directory exists
-fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory);
 
 // setup the logger
 app.use(morgan(logFormat, { stream: accessLogStream }));
