@@ -7,16 +7,11 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HttpModule, Http } from '@angular/http';
 
 import {
-    MatRadioModule,
-    MatNativeDateModule,
-    MatDatepickerModule,
-    MatChipsModule,
-
     MatCardModule,
     MatButtonModule
   } from '@angular/material';
 import {MatIconModule} from '@angular/material/icon';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 
 import { CdkTableModule } from '@angular/cdk/table';
 
@@ -38,10 +33,6 @@ import { appRoutes } from './app.routes';
     FormsModule,
     RouterModule.forRoot(appRoutes),
     MatInputModule,
-    MatRadioModule,
-    MatNativeDateModule,
-    MatDatepickerModule,
-    MatChipsModule,
     ReactiveFormsModule,
     HttpModule,
     HttpClientModule,

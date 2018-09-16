@@ -8,9 +8,9 @@ var { upload, fileUpload, getParams, nonRepeatChar } = require('../module');
 router.post('/saveFile', upload.single('fileUpload'), fileUpload);
 
 /* Fetch parameters from GET Api method */
-router.get('/paramsApi', getParams);
+router.get('/:nbr1/paramsApi/:nbr2', getParams);
 
 /* First non-repeating char from a string */
-router.post('/stringApi', nonRepeatChar);
+router.post('/strNonOccr', nonRepeatChar);
 
 module.exports = router;

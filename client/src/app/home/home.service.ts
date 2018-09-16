@@ -20,4 +20,12 @@ export class HomeService {
       return this.http.post<any>(`${this.serverApiUrl}/saveFile`, (formData));
     }
   }
+
+  sendStr(inputString: string) {
+    return this.http.post<any>(`${this.serverApiUrl}/strNonOccr`, { inputStr: inputString});
+  }
+
+  sendDataUrl(paramsData: any) {
+    return this.http.get<any>(`${this.serverApiUrl}/${paramsData.nbr1}/paramsApi/${paramsData.nbr2}`);
+  }
 }

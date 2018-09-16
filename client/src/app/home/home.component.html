@@ -37,12 +37,75 @@
           <div class="row">
             <div class="col-md-8"></div>
             <div class="col-md-4">
-              <button class="btn btn-primary" [disabled]="!f.valid">Submit</button>
+              <button mat-raised-button color="primary">Submit</button>
             </div>
           </div>
         </div>
       </div>
     </form>
     <hr/>
+    <form class="form-horizontal" #f="ngForm" novalidate (ngSubmit)="sendStr()">
+      <div class="container">
+        <div class="card">
+          <div class="card-content">
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field class="example-full-width">
+                  <input 
+                    name="inputStr"
+                    matInput
+                    placeholder="enter any string"
+                    (keypress)="charOnlyInputField($event)"
+                    [(ngModel)]="inputString"
+                    required
+                  >
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <button class="strSubmit" mat-raised-button color="primary">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <hr/>
+    <form class="form-horizontal" #f="ngForm" novalidate (ngSubmit)="sendDataUrl()">
+      <div class="container">
+        <div class="card">
+          <div class="card-content">
+            <div class="row">
+              <div class="col-md-3">
+                <mat-form-field class="example-full-width">
+                  <input 
+                    name="inputStr"
+                    matInput
+                    placeholder="enter any string"
+                    (keypress)="numOnlyInputField($event)"
+                    [(ngModel)]="inputNbr1"
+                    required
+                  >
+                </mat-form-field>
+              </div>
+              <div class="col-md-3">
+                <mat-form-field class="example-full-width">
+                  <input 
+                    name="inputStr"
+                    matInput
+                    placeholder="enter any string"
+                    (keypress)="numOnlyInputField($event)"
+                    [(ngModel)]="inputNbr2"
+                    required
+                  >
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <button class="strSubmit" mat-raised-button color="primary">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
