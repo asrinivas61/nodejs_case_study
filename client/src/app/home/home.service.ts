@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
 import { environment } from "../../environments/environment";
-import { FormData } from './home.model';
 
 @Injectable()
 export class HomeService {
@@ -12,7 +11,13 @@ export class HomeService {
   constructor(private http: HttpClient){
   }
 
-  saveFile(data: File): Observable<any> {
-    return this.http.post<any>(`${this.serverApiUrl}/saveFile`, (data));
+  saveFile(fileList: any): Observable<any> {
+    if(fileList.length > 0) {
+      let file: File = fileList[0];
+      let formData:FormData = new FormData();
+      formData.append('fileUpload', file, file.name);
+      console.log(formData);
+      return this.http.post<any>(`${this.serverApiUrl}/saveFile`, (formData));
+    }
   }
 }

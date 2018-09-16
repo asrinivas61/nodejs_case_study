@@ -4,10 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
-var { logFormat, accessLogStream } = require('./logger');
+var cors = require('cors');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var { logFormat, accessLogStream } = require('./logger');
+var responseHandler = require('./middleware/responseHandler');
+var appRoutes = require('./routes');
 
 var app = express();
 
@@ -25,11 +26,17 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'client', 'dist')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// Add CORS middleware enable
+app.use(cors());
+
+// Response handler middleware
+app.use(responseHandler);
+
+app.use('/api', appRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

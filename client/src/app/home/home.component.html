@@ -16,16 +16,19 @@
     <div class="page-header">
       <h1>Form to upload files</h1>
     </div>
-    <form class="form-horizontal" #f="ngForm" novalidate (ngSubmit)="submit()">
+    <form class="form-horizontal" #f="ngForm" novalidate (ngSubmit)="submit()" enctype="multipart/form-data">
       <div class="container">
         <div class="card">
           <div class="card-content">
             <div class="row">
               <div class="col-md-offset-2 col-md-10">
-                
-              </div>
-              <div class="col-md-offset-2 col-md-10">
-                <input type="file" (change)="onFileChange($event)" #fileInput>
+                <label class="uploadLable"> Upload Files: </label>
+                <div class="form-group fileUpload"> 
+                    <label class="btn btn-primary">
+                    <span>Browse <i class="fa fa-folder-open" aria-hidden="true"></i></span>
+                      <input type="file" id="fileUpload" (change)="onFileChange($event)" hidden> 
+                </label>
+                </div>
               </div>
             </div> 
           </div>

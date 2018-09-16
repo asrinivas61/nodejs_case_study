@@ -3,18 +3,19 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "prestart": "cp ./client/dist/* ./public",
     "start": "nodemon ./bin/www",
     "test": "mocha test/**/*.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
     "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
     "debug": "~2.6.9",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
     "morgan": "~1.9.0",
+    "multer": "^1.3.1",
     "rotating-file-stream": "^1.3.7"
   },
   "devDependencies": {

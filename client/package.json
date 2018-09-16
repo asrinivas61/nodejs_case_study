@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build--prod": "ng build --prod --no-sourcemap --stats-json",
+    "build--prod": "ng build --prod --source-map=false --stats-json",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -25,7 +25,6 @@
     "@angular/router": "^6.1.0",
     "bootstrap3": "^3.3.5",
     "core-js": "^2.5.4",
-    "ng2-file-upload": "^1.3.0",
     "ngx-bootstrap": "^3.0.1",
     "rxjs": "~6.2.0",
     "rxjs-compat": "^6.3.2",

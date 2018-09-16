@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { FileUploader } from 'ng2-file-upload';
 
 import { HomeService } from './home.service';
 
@@ -24,11 +23,12 @@ export class HomeComponent implements OnInit {
     this.homeService.saveFile(this.file)
         .subscribe((res: Response) => {
           console.log('file upload response');
+          alert('file uploaded successfully');
         })
   }
   
   onFileChange(event) {
     console.log(event.target.files[0]);
-    this.file = event.target.files[0];
+    this.file = event.target.files;
   }
 }

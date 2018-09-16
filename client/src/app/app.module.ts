@@ -6,7 +6,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HttpModule, Http } from '@angular/http';
 
-import { FileSelectDirective, FileDropDirective, FileUploader } from 'ng2-file-upload/ng2-file-upload';
 import {
     MatRadioModule,
     MatNativeDateModule,
@@ -31,9 +30,7 @@ import { appRoutes } from './app.routes';
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent,
-    FileSelectDirective,
-    FileDropDirective
+    HomeComponent
   ],
   imports: [
     BrowserModule,
