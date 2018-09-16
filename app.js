@@ -2,8 +2,9 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+var morgan = require('morgan');
 var bodyParser = require('body-parser')
+var rfs = require('rotating-file-stream');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -14,7 +15,21 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-app.use(logger('dev'));
+var logDirectory = path.join(__dirname, 'log');
+
+// create a rotating write stream
+var accessLogStream = rfs('access.log', {
+  interval: '1d', // rotate daily
+  path: logDirectory
+})
+
+// ensure log directory exists
+fs.existsSync(logDirectory) || fs.mkdirSync(logDirectory);
+
+// setup the logger
+app.use(morgan(':remote-addr - :remote-user [:date[web]] ":method :url HTTP/:http-version" :status :res[content-length] ":referrer" ":user-agent"',
+          { stream: accessLogStream })
+      );
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
