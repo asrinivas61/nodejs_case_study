@@ -98,15 +98,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
-/* harmony import */ var ng2_file_upload_ng2_file_upload__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ng2-file-upload/ng2-file-upload */ "./node_modules/ng2-file-upload/ng2-file-upload.js");
-/* harmony import */ var ng2_file_upload_ng2_file_upload__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(ng2_file_upload_ng2_file_upload__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
-/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/esm5/icon.es5.js");
-/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/input */ "./node_modules/@angular/material/esm5/input.es5.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _auth_login_login_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./auth/login/login.component */ "./src/app/auth/login/login.component.ts");
-/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
-/* harmony import */ var _app_routes__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./app.routes */ "./src/app/app.routes.ts");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _angular_material_icon__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/icon */ "./node_modules/@angular/material/esm5/icon.es5.js");
+/* harmony import */ var _angular_material_input__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/input */ "./node_modules/@angular/material/esm5/input.es5.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _auth_login_login_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./auth/login/login.component */ "./src/app/auth/login/login.component.ts");
+/* harmony import */ var _home_home_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./home/home.component */ "./src/app/home/home.component.ts");
+/* harmony import */ var _app_routes__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./app.routes */ "./src/app/app.routes.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -127,38 +125,31 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"],
-                _auth_login_login_component__WEBPACK_IMPORTED_MODULE_12__["LoginComponent"],
-                _home_home_component__WEBPACK_IMPORTED_MODULE_13__["HomeComponent"],
-                ng2_file_upload_ng2_file_upload__WEBPACK_IMPORTED_MODULE_7__["FileSelectDirective"],
-                ng2_file_upload_ng2_file_upload__WEBPACK_IMPORTED_MODULE_7__["FileDropDirective"]
+                _app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"],
+                _auth_login_login_component__WEBPACK_IMPORTED_MODULE_11__["LoginComponent"],
+                _home_home_component__WEBPACK_IMPORTED_MODULE_12__["HomeComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_1__["BrowserAnimationsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot(_app_routes__WEBPACK_IMPORTED_MODULE_14__["appRoutes"]),
-                _angular_material_input__WEBPACK_IMPORTED_MODULE_10__["MatInputModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatRadioModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatNativeDateModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatDatepickerModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatChipsModule"],
+                _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"].forRoot(_app_routes__WEBPACK_IMPORTED_MODULE_13__["appRoutes"]),
+                _angular_material_input__WEBPACK_IMPORTED_MODULE_9__["MatInputModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ReactiveFormsModule"],
                 _angular_http__WEBPACK_IMPORTED_MODULE_6__["HttpModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatCardModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatButtonModule"],
-                _angular_material_icon__WEBPACK_IMPORTED_MODULE_9__["MatIconModule"]
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatCardModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_7__["MatButtonModule"],
+                _angular_material_icon__WEBPACK_IMPORTED_MODULE_8__["MatIconModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]],
             schemas: [_angular_core__WEBPACK_IMPORTED_MODULE_2__["CUSTOM_ELEMENTS_SCHEMA"]]
         })
     ], AppModule);
@@ -273,7 +264,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/*.userListAlert {\r\n\theight: 70px;\r\n}\r\n*/\r\n.list-container {\r\n\twidth: 75%;\r\n\tmargin: auto;\r\n\tpadding: 10px 45px;\r\n\tbox-shadow: 0px -1px 5px rgba(0, 0, 0, 0.3);\r\n}\r\n.text-danger {\r\n\tposition: absolute;\r\n\ttop: 34px;\r\n}\r\n.col-md-offset-2 {\r\n\theight: 50px;\r\n}\r\nmat-input-container {\r\n\twidth: 50%;\r\n}"
+module.exports = "/*.userListAlert {\r\n\theight: 70px;\r\n}\r\n*/\r\n.list-container {\r\n\twidth: 75%;\r\n\tmargin: auto;\r\n\tpadding: 10px 45px;\r\n\tbox-shadow: 0px -1px 5px rgba(0, 0, 0, 0.3);\r\n}\r\n.text-danger {\r\n\tposition: absolute;\r\n\ttop: 34px;\r\n}\r\n.col-md-offset-2 {\r\n\theight: 50px;\r\n}\r\n[hidden] {\r\n\tdisplay: none !important;\r\n}\r\n.uploadForm {\r\n\tmargin-left: 40%;\r\n\tmargin-top: 80px;\r\n}\r\n.fileUpload {\r\n\tfloat: left;\r\n\tmargin: 0 20px;\r\n}\r\n.uploadLable {\r\n\tfloat: left;\r\n\tmargin-top: 7px;\r\n}\r\nmat-form-field {\r\n\twidth: 100%;\r\n}\r\n.strSubmit {\r\n\tmargin-left: 38%;\r\n}"
 
 /***/ }),
 
@@ -284,7 +275,7 @@ module.exports = "/*.userListAlert {\r\n\theight: 70px;\r\n}\r\n*/\r\n.list-cont
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"home-container\">\n  <nav class=\"navbar navbar-inverse\">\n    <div class=\"container\">\n      <div class=\"navbar-header\">\n        <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n          <span class=\"sr-only\">Toggle navigation</span>\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n        </button>\n        <a class=\"navbar-brand\" href=\"#\">HomePage</a>\n      </div>\n    </div>\n  </nav>\n  <div class=\"list-container\">\n    <div class=\"page-header\">\n      <h1>Form to upload files</h1>\n    </div>\n    <form class=\"form-horizontal\" #f=\"ngForm\" novalidate (ngSubmit)=\"submit()\">\n      <div class=\"container\">\n        <div class=\"card\">\n          <div class=\"card-content\">\n            <div class=\"row\">\n              <div class=\"col-md-offset-2 col-md-10\">\n                \n              </div>\n              <div class=\"col-md-offset-2 col-md-10\">\n                <input type=\"file\" (change)=\"onFileChange($event)\" #fileInput>\n              </div>\n            </div> \n          </div>\n        </div>\n        <div class=\"submit-wrapper\">\n          <div class=\"row\">\n            <div class=\"col-md-8\"></div>\n            <div class=\"col-md-4\">\n              <button class=\"btn btn-primary\" [disabled]=\"!f.valid\">Submit</button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </form>\n    <hr/>\n  </div>\n</div>\n"
+module.exports = "<div class=\"home-container\">\n  <nav class=\"navbar navbar-inverse\">\n    <div class=\"container\">\n      <div class=\"navbar-header\">\n        <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\" aria-controls=\"navbar\">\n          <span class=\"sr-only\">Toggle navigation</span>\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n          <span class=\"icon-bar\"></span>\n        </button>\n        <a class=\"navbar-brand\" href=\"#\">HomePage</a>\n      </div>\n    </div>\n  </nav>\n  <div class=\"list-container\">\n    <div class=\"page-header\">\n      <h1>Form to upload files</h1>\n    </div>\n    <form class=\"form-horizontal\" #f=\"ngForm\" novalidate (ngSubmit)=\"submit()\" enctype=\"multipart/form-data\">\n      <div class=\"container\">\n        <div class=\"card\">\n          <div class=\"card-content\">\n            <div class=\"row\">\n              <div class=\"col-md-offset-2 col-md-10\">\n                <label class=\"uploadLable\"> Upload Files: </label>\n                <div class=\"form-group fileUpload\"> \n                    <label class=\"btn btn-primary\">\n                    <span>Browse <i class=\"fa fa-folder-open\" aria-hidden=\"true\"></i></span>\n                      <input type=\"file\" id=\"fileUpload\" (change)=\"onFileChange($event)\" hidden> \n                </label>\n                </div>\n              </div>\n            </div> \n          </div>\n        </div>\n        <div class=\"submit-wrapper\">\n          <div class=\"row\">\n            <div class=\"col-md-8\"></div>\n            <div class=\"col-md-4\">\n              <button mat-raised-button color=\"primary\">Submit</button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </form>\n    <hr/>\n    <form class=\"form-horizontal\" #f=\"ngForm\" novalidate (ngSubmit)=\"sendStr()\">\n      <div class=\"container\">\n        <div class=\"card\">\n          <div class=\"card-content\">\n            <div class=\"row\">\n              <div class=\"col-md-6\">\n                <mat-form-field class=\"example-full-width\">\n                  <input \n                    name=\"inputStr\"\n                    matInput\n                    placeholder=\"enter any string\"\n                    (keypress)=\"charOnlyInputField($event)\"\n                    [(ngModel)]=\"inputString\"\n                    required\n                  >\n                </mat-form-field>\n              </div>\n              <div class=\"col-md-6\">\n                <button class=\"strSubmit\" mat-raised-button color=\"primary\">Submit</button>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </form>\n    <hr/>\n    <form class=\"form-horizontal\" #f=\"ngForm\" novalidate (ngSubmit)=\"sendDataUrl()\">\n      <div class=\"container\">\n        <div class=\"card\">\n          <div class=\"card-content\">\n            <div class=\"row\">\n              <div class=\"col-md-3\">\n                <mat-form-field class=\"example-full-width\">\n                  <input \n                    name=\"inputStr\"\n                    matInput\n                    placeholder=\"enter number 1\"\n                    (keypress)=\"numOnlyInputField($event)\"\n                    [(ngModel)]=\"inputNbr1\"\n                    required\n                  >\n                </mat-form-field>\n              </div>\n              <div class=\"col-md-3\">\n                <mat-form-field class=\"example-full-width\">\n                  <input \n                    name=\"inputStr\"\n                    matInput\n                    placeholder=\"enter number 2\"\n                    (keypress)=\"numOnlyInputField($event)\"\n                    [(ngModel)]=\"inputNbr2\"\n                    required\n                  >\n                </mat-form-field>\n              </div>\n              <div class=\"col-md-6\">\n                <button class=\"strSubmit\" mat-raised-button color=\"primary\">Find Product</button>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </form>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -310,7 +301,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-// import { FileUploader } from 'ng2-file-upload';
 
 var HomeComponent = /** @class */ (function () {
     function HomeComponent(homeService) {
@@ -318,15 +308,46 @@ var HomeComponent = /** @class */ (function () {
     }
     HomeComponent.prototype.ngOnInit = function () {
     };
+    HomeComponent.prototype.charOnlyInputField = function (event) {
+        var pattern = /[a-zA-Z]/;
+        var inputChar = String.fromCharCode(event.charCode);
+        if (event.keyCode != 8 && !pattern.test(inputChar)) {
+            event.preventDefault();
+        }
+    };
+    HomeComponent.prototype.numOnlyInputField = function (event) {
+        var pattern = /[0-9\s]/;
+        var inputChar = String.fromCharCode(event.charCode);
+        if (event.keyCode != 8 && !pattern.test(inputChar)) {
+            event.preventDefault();
+        }
+    };
     HomeComponent.prototype.submit = function () {
         this.homeService.saveFile(this.file)
             .subscribe(function (res) {
             console.log('file upload response');
+            alert('file uploaded successfully');
         });
     };
     HomeComponent.prototype.onFileChange = function (event) {
         console.log(event.target.files[0]);
-        this.file = event.target.files[0];
+        this.file = event.target.files;
+    };
+    HomeComponent.prototype.sendStr = function () {
+        this.homeService.sendStr(this.inputString)
+            .subscribe(function (res) {
+            alert("First non-repeatng char: " + res['result']);
+        });
+    };
+    HomeComponent.prototype.sendDataUrl = function () {
+        var nbrs = {
+            nbr1: this.inputNbr1,
+            nbr2: this.inputNbr2
+        };
+        this.homeService.sendDataUrl(nbrs)
+            .subscribe(function (res) {
+            alert("successfull read the params: " + res['result']);
+        });
     };
     HomeComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -374,8 +395,20 @@ var HomeService = /** @class */ (function () {
         this.http = http;
         this.serverApiUrl = _environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].serverEndpoint;
     }
-    HomeService.prototype.saveFile = function (data) {
-        return this.http.post(this.serverApiUrl + "/saveFile", (data));
+    HomeService.prototype.saveFile = function (fileList) {
+        if (fileList.length > 0) {
+            var file = fileList[0];
+            var formData = new FormData();
+            formData.append('fileUpload', file, file.name);
+            console.log(formData);
+            return this.http.post(this.serverApiUrl + "/saveFile", (formData));
+        }
+    };
+    HomeService.prototype.sendStr = function (inputString) {
+        return this.http.post(this.serverApiUrl + "/strNonOccr", { inputStr: inputString });
+    };
+    HomeService.prototype.sendDataUrl = function (paramsData) {
+        return this.http.get(this.serverApiUrl + "/" + paramsData.nbr1 + "/paramsApi/" + paramsData.nbr2);
     };
     HomeService = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])(),
@@ -404,7 +437,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 var environment = {
     production: false,
-    serverEndpoint: 'http://localhost:3001/'
+    serverEndpoint: 'http://localhost:3001/api'
 };
 
 
