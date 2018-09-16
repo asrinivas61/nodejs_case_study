@@ -47,7 +47,7 @@ npm start
     An UI provided to select any file from the client local system, and that can be uploaded to server. At server it will be stored in a folder.
     
     The UI screen looks like below.
-    ![Imgur](https://i.imgur.com/QBoA0gv.png)
+   ![Imgur](https://i.imgur.com/QBoA0gv.png)
 
 ## License
 
