@@ -22,28 +22,32 @@
 
 ```bash
 git clone https://github.com/asrinivas61/nodejs_case_study.git
+
 # You may use npm or Yarn
 npm install
+
 # After successful installation
 npm start
 ```
 ## Existing Features
 
 ### 1. Simple NodeJS server listening on port 3001 & output a local folder contents.
-   NodeJS server will start running once after installing node modules & running ```js npm start``` command.
+   NodeJS server will start running once after installing node modules & running ```npm start``` command.
 
 ### 2. NodeJS server that serves as a RESTFUL api that takes two parameters in a GET call and produces their product.
    A client UI code build with Angular 6 production files are already copied in the node server public folder. It will start serving the UI code immediately after running the server.
 
    The UI screen looks like below.
-   [Imgur](https://i.imgur.com/2XBDHPg.png)
+   ![Imgur](https://i.imgur.com/2XBDHPg.png)
 
 ### 3. NodeJS server that serves as a RESTFUL  api that accepts a String as an input name and returns the first non-repeating character in the String.
     Client UI designed in such a way provided an input field with validation which accepts only string input.
 
 ### 4. NodeJS server that serves as a RESTFUL  api that accepts a file content and writes them to the disk.
     An UI provided to select any file from the client local system, and that can be uploaded to server. At server it will be stored in a folder.
-    [Imgur](https://i.imgur.com/QBoA0gv.png)
+    
+    The UI screen looks like below.
+    ![Imgur](https://i.imgur.com/QBoA0gv.png)
 
 ## License
 
