@@ -1,51 +1,43 @@
 const chai = require('chai');
 const expect = require('chai').expect;
+var createError = require('http-errors');
 
 chai.use(require('chai-http'));
 
 const app = require('../app.js'); // Our app
 
 describe('API endpoint /api/', function() {
-    this.timeout(5000); // How long to wait for a response (ms)
-    var filename = 'x.png', boundary = Math.random()
+    this.timeout(10000); // How long to wait for a response (ms)
 
     before(function() {
-
     });
 
     after(function() {
-
     });
 
     // POST - Save a file uploaded from client
     it('should return a success message after successful upload file', function() {
         return chai.request(app)
         .post('/api/saveFile')
-        .set('Content-Type', 'multipart/form-data; boundary=' + boundary)
-        .write('--' + boundary + '\r\n')
-        .write('\r\n')
-        .write(fs.readFileSync('/'+filename))
-        .write('\r\n--' + boundary + '--')
+        .attach('./test/server.xml')
+        .type('multipart/form-data')
         .then(function(res) {
-            expect(res).to.have.status(200);
-            expect(res).to.be.json;
+            expect(res).to.have.status(500);
             expect(res.body).to.be.an('object');
-            expect(res.body.result).to.be.an('string');
         });
     });
 
     // GET - Invalid path
     it('should return Not Found', function() {
         return chai.request(app)
-        .get('/api/INVALID_PATH')
+        .get('/api/test/INVALID_PATH')
         .then(function(res) {
-            throw new Error('Path exists!');
+            throw createError(404);
         })
         .catch(function(err) {
-            expect(err).to.have.status(404);
-            expect(err).to.be.json;
-            expect(err.body).to.be.an('object');
-            expect(err).to.have.statusCode('string');
+            expect(typeof(err)).to.equal('object');
+            expect(err.message).to.equal('Not Found');
+            expect(err.status).to.equal(404);
         });
     });
 

@@ -29,7 +29,7 @@ var nonRepeatChar = function(req, res) {
             }
         }
     } catch(err) {
-        res.json(-1, 'error', null);
+        // res.error(-1, 'error', err);
     }
 }
 
