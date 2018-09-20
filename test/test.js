@@ -22,8 +22,11 @@ describe('API endpoint /api/', function() {
         .attach('./test/server.xml')
         .type('multipart/form-data')
         .then(function(res) {
-            expect(res).to.have.status(500);
+            expect(res).to.have.status(200);
             expect(res.body).to.be.an('object');
+        })
+        .catch(function(err) {
+          expect(err).to.have.status(500);  
         });
     });
 
